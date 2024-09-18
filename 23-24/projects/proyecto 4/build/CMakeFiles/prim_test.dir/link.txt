@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/prim_test.dir/Graph/prim_test.cpp.o -o prim_test 

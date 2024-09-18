@@ -1,0 +1,168 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GraphLibrary",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GRAPH_TEST::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GRAPH_TEST-Debug-a9ac773d82f187f70f7b.json",
+					"name" : "GRAPH_TEST",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "a_star_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-a_star_test-Debug-0796a8496c4927d9f280.json",
+					"name" : "a_star_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bfs_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bfs_test-Debug-bd0998f99466f28c75ad.json",
+					"name" : "bfs_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dfs_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dfs_test-Debug-ff5c5ee17ae1e1e6ba4c.json",
+					"name" : "dfs_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dijkstra_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dijkstra_test-Debug-2389787abd6d3fb0dfdd.json",
+					"name" : "dijkstra_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "edge_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-edge_test-Debug-8bcec2c5b633eb7a4977.json",
+					"name" : "edge_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "floyd_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-floyd_test-Debug-1a6ac5df7241b76888f9.json",
+					"name" : "floyd_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "graph_cell_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-graph_cell_test-Debug-219a039698cfa6f36276.json",
+					"name" : "graph_cell_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "graph_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-graph_test-Debug-7c18dd80b1e0e00c82e5.json",
+					"name" : "graph_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "kruskal_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-kruskal_test-Debug-1c197dd44af37ab9bdfd.json",
+					"name" : "kruskal_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prim_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prim_test-Debug-3d95118aafcae163de37.json",
+					"name" : "prim_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_all_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_all_tests-Debug-040432af52c639c10a3b.json",
+					"name" : "run_all_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vertex_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vertex_test-Debug-942435a91d9204b21c7a.json",
+					"name" : "vertex_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+		"source" : "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

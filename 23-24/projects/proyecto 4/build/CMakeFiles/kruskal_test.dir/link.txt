@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/kruskal_test.dir/Graph/kruskal_test.cpp.o -o kruskal_test 

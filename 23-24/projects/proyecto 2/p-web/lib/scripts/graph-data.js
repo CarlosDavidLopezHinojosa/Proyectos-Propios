@@ -1,0 +1,1 @@
+let graphData={graphOptions:{attractionForce:1,linkLength:10,repulsionForce:150,centralForce:3,edgePruning:100,minNodeRadius:3,maxNodeRadius:7},isInitialized:!0,paths:["crear-un-portafolio-web.html","scripts-para-ejecutar-en-la-vm.html"],nodeCount:2,linkSources:[0],linkTargets:[1],labels:["Crear un Portafolio Web","Scripts para ejecutar en la VM"],radii:[7,7],linkCount:1}

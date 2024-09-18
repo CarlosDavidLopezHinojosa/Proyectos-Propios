@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "7a356fd6d8e06fbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "815646d9eedc7e78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b55970cd84af661",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "a265adad29a7221a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Script para crear tu web con Obsidian.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a35e671c07680293",
+    "type": "split",
+    "children": [
+      {
+        "id": "06c269918ea95218",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0cfca38e2d9a238",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "28fc12c1530e3814",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "358752489ac18b92",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fb5ca2244edd7f9a",
+    "type": "split",
+    "children": [
+      {
+        "id": "13000aa6a562405e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e6aa8ff321815408",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5cf048082dda64b9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3f2e4d669e351402",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3b3832757e2df2c1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "5b55970cd84af661",
+  "lastOpenFiles": [
+    "Script para crear tu web con Obsidian.md",
+    "Creación de un Servidor Web con Apache.md",
+    "Configuración del fichero apache.md",
+    "Encontrar la carpeta que puse en mi VM.md",
+    "Imágenes/Captura de pantalla de 2024-07-13 23-43-40.png",
+    "Imágenes"
+  ]
+}

@@ -1,0 +1,485 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mi Portfolio Web]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Mi Portfolio Web</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 22 Jul 2024 11:46:04 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 22 Jul 2024 11:46:04 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Scripts para ejecutar en la VM]]></title><description><![CDATA[ 
+ <br>Nota: Ejecutar los scripts con sudo sudo ./script<br><br>#!/bin/bash
+
+# Actualizar el sistema operativo
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+# Instalar herramientas básicas
+sudo apt install -y git wget curl vim ufw htop fail2ban build-essential
+
+# Configurar el firewall UFW
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+
+# Configurar Fail2Ban
+sudo systemctl start fail2ban
+sudo systemctl enable fail2ban
+
+# Instalar y configurar Apache
+sudo apt install -y apache2
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+# Configurar el registro de logs (rsyslog ya está instalado por defecto en Ubuntu)
+sudo systemctl start rsyslog
+sudo systemctl enable rsyslog
+
+# Configurar swap (2GB en este ejemplo)
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+# Crear un directorio para backups (ajusta según tus necesidades)
+sudo mkdir -p /backup
+
+# Configurar backup diario (ajusta el comando de backup según tus necesidades)
+BACKUP_SCRIPT="/usr/local/bin/backup-script.sh"
+echo "#!/bin/bash" | sudo tee $BACKUP_SCRIPT
+echo "tar czf /backup/backup-\$(date +\%F).tar.gz /home/$USER" | sudo tee -a $BACKUP_SCRIPT
+sudo chmod +x $BACKUP_SCRIPT
+(crontab -l ; echo "0 2 * * * $BACKUP_SCRIPT") | crontab -
+
+# Optimizar el rendimiento deshabilitando servicios innecesarios (ejemplo)
+# sudo systemctl disable nombre_del_servicio
+# sudo systemctl stop nombre_del_servicio
+
+# Mensaje final
+echo "Configuración completada con éxito."
+Copy<br><br>#!/bin/bash
+
+cd /usr/local/src/
+sudo wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+sudo tar xf noip-duc-linux.tar.gz
+cd noip-2.1.9-1/
+sudo make install
+
+sudo /usr/local/bin/noip2 -C
+
+sudo echo -e "
+
+[Unit]\n
+Description=No-IP Dynamic DNS Update Client\n
+After=network.target\n\n
+
+[Service]\n
+Type=forking\n
+ExecStart=/usr/local/bin/noip2\n
+ExecStop=/usr/local/bin/noip2 -K\n\n
+
+[Install]\n
+WantedBy=multi-user.target\n" &gt; "/etc/systemd/system/noip2.service"
+
+sudo systemctl daemon-reload
+sudo systemctl enable noip2
+sudo systemctl start noip2
+Copy<br><br>#!/bin/bash
+
+if [ $# -ne 3 ]
+then
+    echo "Uso : $0 &lt;mi_pagina_web&gt; &lt;nombre_del_servidor&gt; &lt;primer_index&gt;"
+    exit 1 
+fi
+
+if [ ! -d $1 ]
+then
+    echo "Uso : $0 &lt;mi_pagina_web&gt; &lt;nombre_del_servidor&gt; &lt;primer_index&gt;  $1 debe ser un directorio"
+    exit 1
+fi
+
+web_page_folder=$1
+base_folder=$(basename $web_page_folder)
+server_name=$2
+first_index=$3
+base_index=$(basename $first_index)
+
+#Moviendo carpeta a "/var/www/html"
+sudo cp -r $web_page_folder /var/www/html
+
+
+#Configurando permisos
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 755 /var/www/html
+
+
+#Configurando el fichero
+sudo echo -e "# This is the main Apache server configuration file. It contains the\n\
+# configuration directives that give the server its instructions.\n\
+# See http://httpd.apache.org/docs/2.4/ for detailed information about\n\
+# the directives and /usr/share/doc/apache2/README.Debian about Debian specific\n\
+# hints.\n\
+\n\
+# Global configuration\n\
+\n\
+ServerRoot \"/etc/apache2\"\n\
+\n\
+# PidFile: The file in which the server should record its process\n\
+# identification number when it starts.\n\
+PidFile \${APACHE_PID_FILE}\n\
+\n\
+Timeout 300\n\
+\n\
+KeepAlive On\n\
+MaxKeepAliveRequests 100\n\
+KeepAliveTimeout 5\n\
+\n\
+User \${APACHE_RUN_USER}\n\
+Group \${APACHE_RUN_GROUP}\n\
+\n\
+HostnameLookups Off\n\
+ErrorLog \${APACHE_LOG_DIR}/error.log\n\
+LogLevel warn\n\
+\n\
+IncludeOptional mods-enabled/*.load\n\
+IncludeOptional mods-enabled/*.conf\n\
+Include ports.conf\n\
+\n\
+&lt;Directory /&gt;\n\
+\tOptions FollowSymLinks\n\
+\tAllowOverride None\n\
+\tRequire all denied\n\
+&lt;/Directory&gt;\n\
+\n\
+&lt;Directory /usr/share&gt;\n\
+\tAllowOverride None\n\
+\tRequire all granted\n\
+&lt;/Directory&gt;\n\
+\n\
+&lt;Directory /var/www/&gt;\n\
+\tOptions Indexes FollowSymLinks\n\
+\tAllowOverride None\n\
+\tRequire all granted\n\
+&lt;/Directory&gt;\n\
+\n\
+&lt;Directory /var/www/html&gt;\n\
+\tOptions Indexes FollowSymLinks\n\
+\tAllowOverride None\n\
+\tRequire all granted\n\
+&lt;/Directory&gt;\n\
+\n\
+&lt;Directory /var/www/html/$base_folder&gt;\n\
+\tOptions Indexes FollowSymLinks\n\
+\tAllowOverride None\n\
+\tRequire all granted\n\
+&lt;/Directory&gt;\n\
+\n\
+&lt;VirtualHost *:80&gt;\n\
+\tServerAdmin webmaster@localhost\n\
+\tDocumentRoot /var/www/html/$base_folder\n\
+\n\
+\t&lt;Directory /var/www/html/$base_folder&gt;\n\
+\t\tOptions Indexes FollowSymLinks\n\
+\t\tAllowOverride None\n\
+\t\tRequire all granted\n\
+\t&lt;/Directory&gt;\n\
+\n\
+\tErrorLog \${APACHE_LOG_DIR}/error.log\n\
+\tCustomLog \${APACHE_LOG_DIR}/access.log combined\n\
+&lt;/VirtualHost&gt;\n\
+\n\
+&lt;FilesMatch \"^\\.ht\"&gt;\n\
+\tRequire all denied\n\
+&lt;/FilesMatch&gt;\n\
+\n\
+LogFormat \"%v:%p %h %l %u %t \\\"%r\\\" %&gt;s %O \\\"%{Referer}i\\\" \\\"%{User-Agent}i\\\"\" vhost_combined\n\
+LogFormat \"%h %l %u %t \\\"%r\\\" %&gt;s %O \\\"%{Referer}i\\\" \\\"%{User-Agent}i\\\"\" combined\n\
+LogFormat \"%h %l %u %t \\\"%r\\\" %&gt;s %O\" common\n\
+LogFormat \"%{Referer}i -&gt; %U\" referer\n\
+LogFormat \"%{User-agent}i\" agent\n\
+\n\
+IncludeOptional conf-enabled/*.conf\n\
+IncludeOptional sites-enabled/*.conf\n\
+\n\
+ServerName $server_name\n\
+\n\
+&lt;IfModule dir_module&gt;\n\
+\tDirectoryIndex $base_index\n\
+&lt;/IfModule&gt;" &gt; /etc/apache2/apache2.conf
+
+sudo echo -e "
+&lt;VirtualHost *:80&gt;\n
+    \tServerAdmin webmaster@localhost\n
+    \tDocumentRoot /var/www/html/$base_folder\n
+    \n
+    \t&lt;Directory /var/www/html/$base_folder&gt;\n
+        \t\tOptions Indexes FollowSymLinks\n
+        \t\tAllowOverride None\n
+        \t\tRequire all granted\n
+    \t&lt;/Directory&gt;\n
+    \n
+    \tErrorLog \${APACHE_LOG_DIR}/error.log\n
+    \tCustomLog \${APACHE_LOG_DIR}/access.log combined\n
+&lt;/VirtualHost&gt;
+" &gt; "/etc/apache2/sites-available/mi_sitio.conf"
+
+
+sudo a2ensite mi_sitio.conf
+
+sudo systemctl restart apache2
+sudo systemctl reload apache2
+Copy<br><br>#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+	echo "Uso: $0 &lt;tu-domnio.org&gt;"
+	exit 1
+fi
+
+dominio=$1
+
+cd "/etc/apache2/sites-available"
+
+sudo apt update
+sudo apt install certbot python3-certbot-apache -y
+sudo certbot --apache -d $dominio
+
+sudo systemctl restart apache2
+sudo certbot renew --dry-run
+Copy]]></description><link>scripts-para-ejecutar-en-la-vm.html</link><guid isPermaLink="false">Scripts para ejecutar en la VM.md</guid><pubDate>Mon, 22 Jul 2024 11:45:55 GMT</pubDate></item><item><title><![CDATA[Crear un Portafolio Web]]></title><description><![CDATA[ 
+ <br><br>La razón de este proyecto era crear un repositorio en la red para los apuntes que fuera haciendo durante la carrera o tal vez un portafolio para proyectos propios, de manera que los tuviera siempre accesibles desde cualquier dispositivo.<br>Pero... <br><br>En mi cabeza pensé en varías posibilidades, en la carrera más en concreto en el segundo año de esta, en la asignatura de Programación y Administración de Sistemas "PAS", trabajamos servidores http  como apache y como configurar estos, sin embargo, <br><br>Tenerlo en el ordenador personal sería lo más cómodo ya que podría realizar las modificaciones que quisiera en poco tiempo, pero sería ineficiente ya que para poder ver el contenido de la web necesitaría que este estuviera encendido siempre y como está la luz hoy en día..., no era una opción viable, además no quiero tocar la configuración demasiado.<br>Otra opción sería usar una máquina virtual, pero son muy lentas si están alojadas en la web (en concreto las que ofrece mi Universidad), me veía en un callejón sin salida.<br>A no ser que a mi mente llegasen las palabras que un compañero de carrera y mejor amigo, el cuál hablaba sobre unos servidores totalmente gratuitos que ofrecía Oracle, tenía que probarlo, opción que descarte, debido a numerosos errores que no me dejaban lanzar la instancia, por lo que al final usaremos AWS.<br>El concepto de este proyecto abarcará las siguientes Tecnologías:<br>
+<br>Obsidian : Para la generación de htmla partir de las notas.
+<br>Amazon Web Service (AWS) : Utilizaremos las VM's de su servidor gratuito para tener una web accesible en cualquier momento.
+<br>No-Ip : Para crear un dominio que nos represente.
+<br>Apache : Servicio que nos proporcionará el protocolo http y posteriormente https.
+<br>Certbot : Para la generación de certificados SSL.
+<br>Dedicaremos un capítulo a cada una de estas tecnologías y a su configuración.<br><br>Esta es una configuración muy básica, deberemos crear nuestro vaultdonde tendremos nuestras notas.<br><img alt="Crear Vault" src="images/1.vault_ob.png"><br>Una vez creado el repositorio de notas deberás instalar el plugin de comunidad Webage HTML Export para tus notas poder pasarlas a html.<br>A partir de aquí es cosa del lector desarrollar el proyecto que quiera o la organizar como quiera sus notas.<br><br>Para acceder al servidor gratuito de <a data-tooltip-position="top" aria-label="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwiw9diimq6HAxVktWgJHRu4AQoYABAAGgJ3Zg&amp;ase=2&amp;gclid=CjwKCAjw1920BhA3EiwAJT3lSa6lMXuptsQuLg7GqYmsOmeSaUxkYzRbLRFxk8OO5YBZAPhStt8uvhoCUQsQAvD_BwE&amp;ohost=www.google.com&amp;cid=CAESVuD2etctdAo2H8zccPHR3jH_fefLLkd7CU89ofVfpHF2BK1duqZdyPDb3bEAH6VAItq2wluVVMC6lRWmu-d9mA5ph7TMajnBPqu4HVtVdabrq7YQo_r6&amp;sig=AOD64_1ht2uv5h3fgT2YWvKtIwBnOT62ow&amp;q&amp;nis=4&amp;adurl&amp;ved=2ahUKEwjtjdKimq6HAxUvR_EDHYlLB6AQ0Qx6BAgGEAE" rel="noopener" class="external-link" href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwiw9diimq6HAxVktWgJHRu4AQoYABAAGgJ3Zg&amp;ase=2&amp;gclid=CjwKCAjw1920BhA3EiwAJT3lSa6lMXuptsQuLg7GqYmsOmeSaUxkYzRbLRFxk8OO5YBZAPhStt8uvhoCUQsQAvD_BwE&amp;ohost=www.google.com&amp;cid=CAESVuD2etctdAo2H8zccPHR3jH_fefLLkd7CU89ofVfpHF2BK1duqZdyPDb3bEAH6VAItq2wluVVMC6lRWmu-d9mA5ph7TMajnBPqu4HVtVdabrq7YQo_r6&amp;sig=AOD64_1ht2uv5h3fgT2YWvKtIwBnOT62ow&amp;q&amp;nis=4&amp;adurl&amp;ved=2ahUKEwjtjdKimq6HAxUvR_EDHYlLB6AQ0Qx6BAgGEAE" target="_blank"><code></code></a>AWS con él enlace, deberás registrarte con tus datos personales.<br>Cosas a tener en cuenta:<br>
+<br>
+Un requisito para crear la cuenta es tener una tarjeta de crédito o débito registrada, no se asuste no se le cobrará nada, se usa como seguro de que la persona no es una entidad automática o en caso de superar alguna tasa, cosa que en este proyecto es improbable.
+
+<br>
+Al meter tu tarjeta realmente si te cobra algo, 1€ como retención
+
+<br>Una vez finalizado podemos acceder al home.<br><img alt="Home de AWS" src="images/2.home_aws.png"><br>Para continuar en el buscador pondremos EC2 y aquí configuraremos y crearemos la VM<br><br>Seleccionamos Lanzar la instancia<br><img alt="3. Crear VM" src="images/3.createvm_aws.png"><br>Nos deberá salir la siguiente pantalla.<br><img alt="4.Panel AWS" src="images/4.configvm_aws.png"><br><br>Nombra la VM como prefieras, la imagen del SO que viene por defecto es de Amazon Linux recomiendo cambiarla ya que queremos una distribución basada en debian con los paquetes mínimos que necesitaremos para que funcione el servidor en la nube, asegurando que no se use más almacenamiento.<br><img alt="5. Seleccionar ISO" src="images/5.selectsoiso_aws.png"><br><br>Iremos a la siguiente sección y añadiremos nuestra clave ssh para poder acceder a nuestra máquina.<br><img alt="6. Crear par ssh" src="images/6.sshkey_aws.png"><br>Si quieres obtener más información de este procedimiento accede al siguiente <a data-tooltip-position="top" aria-label="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html?icmpid=docs_ec2_console" rel="noopener" class="external-link" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html?icmpid=docs_ec2_console" target="_blank"><code></code></a>enlace<br>Después de este paso se os descargará un documento con extensión .pem o la que hayáis elegido con este haremos la conexión.<br><br>En esta sección configuramos quienes y desde donde se pueden conectar a nuestra VM,<br>
+recomiendo que inicialmente para la configuración sea solo nuestra ip local.<br><img alt="7. Configurar Red" src="images/7.confignet_aws.png"><br>
+Las demás opciones déjelas por defecto, ya podría lanzar su VM.<br><br>Para obtener instrucciones claras de como conectarse a la máquina entre en el enlace que se encuentra en la casilla de en medio.<br><img alt="8. Conectar a VM" src="images/8.conect_aws.png"><br>En resumidas cuentas los que debe hacer es lo siguiente.<br>Dar permisor al .pem<br>chmod 400 "fichero.pem"
+ssh -i "fichero.pem ubuntu-distro@ec2-vmip.region" 
+Copy<br>Una vez dentro de nuestra instancia, deberemos configurar desde cero, es un cascarón vacío que debemos completar a nuestro gusto.<br><br>La instancia que se nos da esta completamente vacía, por lo que deberemos configurar.<br><br>#Actualizar SO
+sudo apt update &amp;&amp; sudo apt upgrade -y
+Copy<br>#Configuración del firewall
+sudo apt install -y ufw 
+sudo ufw allow 22/tcp 
+sudo ufw allow 80/tcp 
+sudo ufw allow 443/tcp 
+sudo ufw enable
+Copy<br># Ayuda a proteger tu servidor para ataques de fuerza bruta 
+sudo apt install -y fail2ban 
+sudo systemctl start fail2ban 
+sudo systemctl enable fail2ban
+Copy<br>#htop es una herramienta indispensable para monitorear recursos
+sudo apt install -y htop
+Copy<br>#Sistema de logs
+sudo apt install -y rsyslog 
+sudo systemctl start rsyslog 
+sudo systemctl enable rsyslog
+Copy<br>#Apache2 para el servicio http (Lo necesitaremos en este proyecto)
+sudo apt install -y apache2 
+sudo systemctl start apache2 
+sudo systemctl enable apache2
+Copy<br>#Configuración del swapping (En este caso 2G)
+sudo fallocate -l 2G /swapfile 
+sudo chmod 600 /swapfile 
+sudo mkswap /swapfile 
+sudo swapon /swapfile 
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+Copy<br>#Herramientas que recomiendo tener para cualquier proyecto
+sudo apt install -y git wget curl vim
+Copy<br><br>Crearemos un script para realizar las copias de seguridad de manera automática.<br>Contenido del script<br>#!/bin/bash
+tar czf /backup/backup-\$(date +\%F).tar.gz /path/to/your/data
+Copy<br>Automatización<br>(crontab -l ; echo "0 2 * * * $BACKUP_SCRIPT") | crontab -
+Copy<br><br>#!/bin/bash
+
+# Actualizar el sistema operativo
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+# Instalar herramientas básicas
+sudo apt install -y git wget curl vim ufw htop fail2ban build-essential
+
+# Configurar el firewall UFW
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+
+# Configurar Fail2Ban
+sudo systemctl start fail2ban
+sudo systemctl enable fail2ban
+
+# Instalar y configurar Apache
+sudo apt install -y apache2
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+# Configurar el registro de logs (rsyslog ya está instalado por defecto en Ubuntu)
+sudo systemctl start rsyslog
+sudo systemctl enable rsyslog
+
+# Configurar swap (2GB en este ejemplo)
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+# Crear un directorio para backups (ajusta según tus necesidades)
+sudo mkdir -p /backup
+
+# Configurar backup diario (ajusta el comando de backup según tus necesidades)
+BACKUP_SCRIPT="/usr/local/bin/backup-script.sh"
+echo "#!/bin/bash" | sudo tee $BACKUP_SCRIPT
+echo "tar czf /backup/backup-\$(date +\%F).tar.gz /home/$USER" | sudo tee -a $BACKUP_SCRIPT
+sudo chmod +x $BACKUP_SCRIPT
+(crontab -l ; echo "0 2 * * * $BACKUP_SCRIPT") | crontab -
+
+# Optimizar el rendimiento deshabilitando servicios innecesarios (ejemplo)
+# sudo systemctl disable nombre_del_servicio
+# sudo systemctl stop nombre_del_servicio
+
+# Mensaje final
+echo "Configuración completada con éxito."
+Copy<br><br>Si queremos tener un portafolio o nuestro proyecto web en condiciones, no queremos poder acceder a el con una burda ip, debe tener nuestra insignia algo con lo que la identifiquemos y los demás puedan reconocerla, para ello con <a data-tooltip-position="top" aria-label="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwjo6-DBuLWHAxXCQ0ECHQMiCMUYABAAGgJ3cw&amp;ase=2&amp;gclid=Cj0KCQjwwO20BhCJARIsAAnTIVS9D3mj4oAm2AwfupzAbW0iINdqR6UCYmA1WesMHPeBLpWD88ldiB0aAsm4EALw_wcB&amp;ohost=www.google.com&amp;cid=CAESVuD2XcCmcBmfbMCp4kBwxpiosFZKDaAJuW42bc6otDQXj842C2_peD3MxMj5_g-LvF7nueG4cg5B3kTVCyLd6MYjlWEDqQiTXsxGqLcduPpbY_EjFpNb&amp;sig=AOD64_19RX7nHRlqdQkrTQPT475ln8BJiA&amp;q&amp;nis=4&amp;adurl&amp;ved=2ahUKEwiXytrBuLWHAxX_Q6QEHR1kCb4Q0Qx6BAgMEAE" rel="noopener" class="external-link" href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwjo6-DBuLWHAxXCQ0ECHQMiCMUYABAAGgJ3cw&amp;ase=2&amp;gclid=Cj0KCQjwwO20BhCJARIsAAnTIVS9D3mj4oAm2AwfupzAbW0iINdqR6UCYmA1WesMHPeBLpWD88ldiB0aAsm4EALw_wcB&amp;ohost=www.google.com&amp;cid=CAESVuD2XcCmcBmfbMCp4kBwxpiosFZKDaAJuW42bc6otDQXj842C2_peD3MxMj5_g-LvF7nueG4cg5B3kTVCyLd6MYjlWEDqQiTXsxGqLcduPpbY_EjFpNb&amp;sig=AOD64_19RX7nHRlqdQkrTQPT475ln8BJiA&amp;q&amp;nis=4&amp;adurl&amp;ved=2ahUKEwiXytrBuLWHAxX_Q6QEHR1kCb4Q0Qx6BAgMEAE" target="_blank"><code></code></a>no-ip redirigiremos la salida de nuestro servidor a vía ip a través de nuestro dominio.<br>Lógicamente lo primero que tenemos que hacer es crear una cuenta e iniciar sesión, es muy importante que no olvides ni el email ni la contraseña con la que creaste la cuenta, la necesitaremos más tarde.<br>Una vez iniciemos sesión podremos crear nuestro dominio.<br><img alt="9. Home de No-IP" src="images/9.home_noip.png"><br>Crearemos el dominio o el nombre de host, dando el nombre y la extensión que queramos, además de la ip pública de nuestra máquina.<br><img alt="10. Crear nombre de Dominio" src="images/10.nombredominio_noip.png"><br>Ahora desde nuestra VM deberemos hacer lo siguiente:<br>cd /usr/local/src/
+sudo wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+sudo tar xf noip-duc-linux.tar.gz
+cd noip-2.1.9-1/
+sudo make install
+Copy<br>Se nos pedirá el correo y contraseña con el que iniciamos sesión.<br>Para terminar el proceso se te pedirá un intervalo de tiempo, déjalo por defecto que serán unos 30 minutos, después te solicitara si quieres correr algún script, pon que no N<br>Ahora configuraremos el cliente:<br>sudo /usr/local/bin/noip2 -C
+Copy<br>Si accedemos a este sitio web nos saldrá lo siguiente:<br><img alt="11. Página por defecto" src="images/11.default_noip.png"><br><br>Ocurre lo siguiente, lógicamente habrá un momento en la VM la apaguemos, ya no la necesitemos tener encendida o simplemente no queramos, esto se lo debemos indicar a no-ip.<br>Creamos un fichero para que cuando se arranque el sistema, no-ipconozca la ip donde esta alojado el dominio.<br>sudo nano /etc/systemd/system/noip2.service
+Copy<br>[Unit]
+Description=No-IP Dynamic DNS Update Client
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/noip2
+ExecStop=/usr/local/bin/noip2 -K
+
+[Install]
+WantedBy=multi-user.target
+
+Copy<br>Después de esto reiniciaremos los demonios en iniciaremos no-ip.<br>sudo systemctl daemon-reload
+sudo systemctl enable noip2
+sudo systemctl start noip2
+Copy<br><br>En esta sección vamos a tratar varios puntos clave:<br>
+<br>Fichero de configuración
+<br>Configurar nuestro sitio
+<br>Añadir las carpetas con los ficheros que queremos mostrar
+<br>Antes que nada comprobamos que apache2 este funcionando correctamente con:<br>sudo systemctl status apache2
+Copy<br><br>Recomiendo la siguiente configuración para el fichero /etc/apache2/apache2.conf,<br>
+donde mi_pagina_web es la carpeta donde tenemos los ficheros que queremos mostrar, ServerName  el nombre del dominio que creamos antes, e index.html el fichero que queremos que se muestre primero.<br># This is the main Apache server configuration file. It contains the
+# configuration directives that give the server its instructions.
+# See http://httpd.apache.org/docs/2.4/ for detailed information about
+# the directives and /usr/share/doc/apache2/README.Debian about Debian specific
+# hints.
+
+# Global configuration
+
+ServerRoot "/etc/apache2"
+
+# PidFile: The file in which the server should record its process
+# identification number when it starts.
+PidFile ${APACHE_PID_FILE}
+
+Timeout 300
+
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+
+HostnameLookups Off
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+Include ports.conf
+
+&lt;Directory /&gt;
+    Options FollowSymLinks
+    AllowOverride None
+    Require all denied
+&lt;/Directory&gt;
+
+&lt;Directory /usr/share&gt;
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+
+&lt;Directory /var/www/&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+
+&lt;Directory /var/www/html&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+
+&lt;Directory /var/www/html/mi_pagina_web&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+
+&lt;VirtualHost *:80&gt;
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/mi_pagina_web
+
+    &lt;Directory /var/www/html/mi_pagina_web&gt;
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    &lt;/Directory&gt;
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;
+
+&lt;FilesMatch "^\.ht"&gt;
+    Require all denied
+&lt;/FilesMatch&gt;
+
+LogFormat "%v:%p %h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %&gt;s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %&gt;s %O" common
+LogFormat "%{Referer}i -&gt; %U" referer
+LogFormat "%{User-agent}i" agent
+
+IncludeOptional conf-enabled/*.conf
+IncludeOptional sites-enabled/*.conf
+
+ServerName servidor_web
+
+&lt;IfModule dir_module&gt;
+    DirectoryIndex index.html
+&lt;/IfModule&gt;
+
+Copy<br><br>Para que se muestre nuestra página debemos configurar el sitio donde donde estás los ficheros que queremos que estén disponibles a ver, para ello crearemos el fichero de configuración&nbsp;mi_sitio.conf<br>touch /etc/apache/sites-available/mi_sitio.conf
+sudo a2ensite mi_sitio.conf
+sudo systemctl reload apache2
+Copy<br>Dentro de este fichero puedes poner lo siguiente<br>&lt;VirtualHost *:80&gt;
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/mi_pagina_web
+
+    &lt;Directory /var/www/html/mi_pagina_web&gt;
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    &lt;/Directory&gt;
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;
+Copy<br><br>Ya que estamos abriendo sesión por ssh podemos pasar los ficheros o carpetas que ver en tu página web, podemos usar el comando scp.<br>scp -i /ruta/a/la/clave_privada -r /home/localuser/proyecto usuario@servidor.com:/home/usuario/destino
+Copy<br>Ahora reiniciaremos apache2 y podremos ver nuestros ficheros con el protocolo http.<br><br>Con esta sección terminamos la configuración de nuestro proyecto al añadir protocolo seguro a nuestra página web, esto es necesario ya que únicamente con el protocolo http pueden acceder fácilmente a nuestros datos.<br>La configuración se da como sigue: <br>Nota: Asegúrate que en No-Ip tiene la ip pública de la VM correctamente definida, en caso contrario no funcionara<br>sudo apt update
+sudo apt install certbot python3-certbot-apache -y
+sudo certbot --apache -d tu-dominio.no-ip.org
+Copy<br>Con el último comando se nos pedirá el nombre del dominio al que queremos añadir el protocolo seguro, un correo electrónico con el cual nos enviarán noticias y en algunos casos también el fichero del sitio donde queremos tener el certificado.<br>Ahora reiniciamos y configuramos certbot para que se renueven los certificados.<br>sudo systemctl restart apache2
+sudo certbot renew --dry-run
+Copy<br>Una vez leída y comprendida esta página te recomiendo que visites:<br><a data-href="Scripts para ejecutar en la VM" href="scripts-para-ejecutar-en-la-vm.html" class="internal-link" target="_self" rel="noopener">Scripts para ejecutar en la VM</a>]]></description><link>crear-un-portafolio-web.html</link><guid isPermaLink="false">Crear un Portafolio Web.md</guid><pubDate>Sun, 21 Jul 2024 15:32:37 GMT</pubDate><enclosure url="images/1.vault_ob.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="images/1.vault_ob.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>

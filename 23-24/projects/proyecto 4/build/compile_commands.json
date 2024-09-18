@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/edge_test.dir/Edge/edge_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge/edge_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge/edge_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/graph_test.dir/Graph/graph_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/graph_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/graph_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/graph_cell_test.dir/GraphCell/graph_cell_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell/graph_cell_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell/graph_cell_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/vertex_test.dir/Vertex/vertex_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex/vertex_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex/vertex_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/dfs_test.dir/Graph/dfs_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/dfs_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/dfs_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/bfs_test.dir/Graph/bfs_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/bfs_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/bfs_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/dijkstra_test.dir/Graph/dijkstra_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/dijkstra_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/dijkstra_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/floyd_test.dir/Graph/floyd_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/floyd_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/floyd_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/kruskal_test.dir/Graph/kruskal_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/kruskal_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/kruskal_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/prim_test.dir/Graph/prim_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/prim_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/prim_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/a_star_test.dir/Graph/a_star_test.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/a_star_test.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/a_star_test.cpp"
+},
+{
+  "directory": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build",
+  "command": "/usr/bin/c++  -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Edge\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphCell\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Vertex\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/DisjointSet\" -I\"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/GraphAlgorithms\" -g -std=gnu++17 -o CMakeFiles/GRAPH_TEST.dir/Graph/GRAPH_TEST.cpp.o -c \"/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/GRAPH_TEST.cpp\"",
+  "file": "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/Graph/GRAPH_TEST.cpp"
+}
+]

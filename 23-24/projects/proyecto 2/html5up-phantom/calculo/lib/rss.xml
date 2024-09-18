@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Convocatoria de Septiembre]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Convocatoria de Septiembre</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 12 Aug 2024 22:54:13 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 12 Aug 2024 22:54:12 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Funciones Inyectivas, Sobreyectivas y Biyectivas]]></title><description><![CDATA[ 
+ <br><br><br>Una función  es inyectiva si cada elemento del codominio  es la imagen de a lo sumo un elemento del dominio . En otras palabras, no hay dos elementos diferentes del dominio que se mapeen al mismo elemento del codominio.<br>Matemáticamente,  es inyectiva si:<br><br><br>Una función  es sobreyectiva si cada elemento del codominio  es la imagen de al menos un elemento del dominio . Es decir, el rango de la función es igual al codominio.<br>Matemáticamente,  es sobreyectiva si:<br><br><br>Una función  es biyectiva si es tanto inyectiva como sobreyectiva. Esto significa que cada elemento del codominio  es la imagen de exactamente un elemento del dominio . En otras palabras, hay una correspondencia uno a uno entre los elementos de  y los elementos de .<br><br>
+<br>
+Inyectiva:
+
+<br> definida por .
+<br>Para cualquier  y  en , si , entonces , lo que implica .
+
+
+<br>
+Sobreyectiva:
+
+<br> definida por .
+<br>Para cualquier , existe un  tal que , ya que todo número real tiene una raíz cúbica en los números reales.
+
+
+<br>
+Biyectiva:
+
+<br> definida por .
+<br>La función es inyectiva porque si , entonces , lo que implica .
+<br>La función es sobreyectiva porque para cualquier , podemos encontrar  tal que .
+
+
+]]></description><link>cálculo/clase-1-cálculo.html</link><guid isPermaLink="false">Cálculo/Clase 1 - Cálculo.md</guid><pubDate>Tue, 30 Jul 2024 15:14:22 GMT</pubDate></item><item><title><![CDATA[Clase 4 - Cálculo]]></title><description><![CDATA[ 
+ <br><br><br>Un proveedor de servicios de internet realiza mediciones de la velocidad de descarga de un router en tres momentos diferentes en el tiempo. Los resultados de estas mediciones se registraron en la siguiente tabla:<br><br>a). El proveedor quiere una función que describa la velocidad de sus servicios.<br>b). Calcule el valor de la velocidad de descarga en  horas utilizando la función obtenida en la Parte A.<br>c). Determine el total de datos descargados entre  y  horas.<br><br>Sea , calcula la primitiva es decir <br><br><br>Considere la función  definida en el intervalo cerrado .<br>
+<br>Demuestre que  cumple con las condiciones del Teorema de Rolle en el intervalo .
+<br>Encuentre el valor de  en el intervalo  tal que , según lo establece el Teorema de Rolle.
+<br><br>Dada la función , se sabe que  es continua en .<br>
+<br>Demuestre que existe al menos una raíz de  en el intervalo , utilizando el Teorema de Bolzano.
+<br><br>Sea la función  definida en el intervalo cerrado .<br>
+<br>Verifique que  cumple las condiciones del Teorema del Valor Medio en el intervalo .
+<br>Determine el valor de  en el intervalo  tal que  sea igual a la pendiente de la recta secante que pasa por los puntos  y .
+<br><br> <br><br>]]></description><link>cálculo/clase-4-cálculo.html</link><guid isPermaLink="false">Cálculo/Clase 4 - Cálculo.md</guid><pubDate>Mon, 12 Aug 2024 22:34:58 GMT</pubDate></item><item><title><![CDATA[Planning Cálculo]]></title><description><![CDATA[ 
+ <br><br>
+<br>FUNCIONES DE UNA VARIABLE. 
+<br>DERIVACIÓN. DERIVACIÓN NUMÉRICA. 
+<br>MÉTODOS ELEMENTALES DE INTEGRACIÓN. 
+<br>LA INTEGRAL DEFINIDA. INTEGRACIÓN NUMÉRICA. 
+<br>APLICACIONES DE LA INTEGRAL DEFINIDA. 
+<br>ECUACIONES DIFERENCIALES DE PRIMER ORDEN. 
+<br>SERIES DE NÚMEROS REALES. 
+<br>SERIES DE FUNCIONES. 
+<br>FUNCIONES DE VARIAS VARIABLES. 
+<br>EXTREMOS. INTEGRACIÓN.
+<br>Los contenidos de la asignatura están pensados para verse en 8 clases:<br>(Este itinerario es orientativo ya que es posible que si de la clase anterior me quedase algo por dar por falta de tiempo se terminara de dar y practicar, esto aplica para todas las clases).<br>Nota: Los temas 7 y 8 aunque están en la guía docente, no entran en examen.<br>
+<br>
+Clase 1 : Temas del 1 al 3, esta clase sera realmente un repaso de los contenidos dados en bachillerato y la base para el resto del contenido de la asignatura.
+
+<br>
+Clase 2 : Temas de 4 al 5, se vera todo lo relacionado a integrales en una variable y métodos de aproximación.
+
+<br>
+Clase 3 : Tema 6, en esta clase abordaremos el concepto de Ecuación Diferencial Ordinario o EDO, y todos los tipos de estas y métodos de resolución.
+
+<br>
+Clase 4 : Clase de Ejercicios y repaso de conceptos
+
+<br>
+Clase 5 : Tema 9, entraremos en algunos conceptos de las funciones en varias variables, viendo métodos de derivación, límites, continuidad.
+
+<br>
+Clase 6 : Continuación del Tema 9, terminaremos este tema viendo optimización en varias variables, Matriz Hessiana y la aplicación del gradiente en estas.
+
+<br>
+Clase 7 : Tema 10, integrales en varias variables (en concreto 2), cambio de dominio y cambio de variable con Jacobiano.
+
+<br>
+Clase 8 : Repaso de contenidos y realización de ejercicios.
+
+<br><a data-href="Clase 1 - Cálculo" href="cálculo/clase-1-cálculo.html" class="internal-link" target="_self" rel="noopener">Clase 1 - Cálculo</a><br>
+<a data-href="Clase 4 - Cálculo" href="cálculo/clase-4-cálculo.html" class="internal-link" target="_self" rel="noopener">Clase 4 - Cálculo</a><br>
+<a data-href="Teoremas de Cálculo" href="cálculo/teoremas-de-cálculo.html" class="internal-link" target="_self" rel="noopener">Teoremas de Cálculo</a>]]></description><link>cálculo/planning-cálculo.html</link><guid isPermaLink="false">Cálculo/Planning Cálculo.md</guid><pubDate>Mon, 12 Aug 2024 22:47:32 GMT</pubDate></item><item><title><![CDATA[Descripción de los Teoremas]]></title><description><![CDATA[ 
+ <br><br><br>El Teorema de Rolle establece que si una función  es continua en un intervalo cerrado , diferenciable en el intervalo abierto , y además cumple que , entonces existe al menos un punto  en el intervalo abierto  tal que la derivada de la función en ese punto es cero, es decir, .<br>Intuición: El teorema indica que si una función comienza y termina en el mismo valor en un intervalo, y no tiene saltos o discontinuidades, entonces en algún punto dentro de ese intervalo, la función debe tener una pendiente horizontal (es decir, una tangente con pendiente cero).<br><br>El Teorema de Bolzano establece que si una función  es continua en un intervalo cerrado  y los valores de la función en los extremos del intervalo son de signos opuestos (es decir,  y  tienen signos diferentes), entonces existe al menos un punto  en el intervalo abierto  tal que .<br>Intuición: El teorema asegura que si una función continua cambia de signo dentro de un intervalo, debe cruzar el eje  en algún punto, es decir, tiene al menos una raíz en ese intervalo.<br><br>El Teorema del Valor Medio afirma que si una función  es continua en un intervalo cerrado  y diferenciable en el intervalo abierto , entonces existe al menos un punto  en  tal que la derivada de la función en ese punto es igual a la pendiente de la recta secante que une los puntos  y . Matemáticamente, esto se expresa como:<br>
+<br>Intuición: El teorema indica que en algún punto dentro del intervalo, la pendiente de la tangente a la curva es igual a la pendiente de la recta secante que conecta los extremos del intervalo. Es una forma de decir que en algún momento, la tasa de cambio instantánea de la función es igual a la tasa de cambio promedio en ese intervalo.]]></description><link>cálculo/teoremas-de-cálculo.html</link><guid isPermaLink="false">Cálculo/Teoremas de Cálculo.md</guid><pubDate>Mon, 12 Aug 2024 22:17:28 GMT</pubDate></item></channel></rss>

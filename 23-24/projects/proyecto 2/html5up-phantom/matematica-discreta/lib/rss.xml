@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Convocatoria de Septiembre]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Convocatoria de Septiembre</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 19 Aug 2024 16:05:02 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 19 Aug 2024 16:05:01 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Operadores de la Lógica Proposicional]]></title><description><![CDATA[ 
+ <br>En esta clase daremos una explicación básica de lógica proposición.<br>Materiales útiles: <a data-tooltip-position="top" aria-label="https://srexamen.com/mathlogic" rel="noopener" class="external-link" href="https://srexamen.com/mathlogic" target="_blank"><strong></strong></a>simplificador de expresiones lógicas<br><br>1. Negación (NO)<br>
+<br>Símbolo: 
+<br>Descripción: Invierte el valor de verdad de una proposición.
+<br>Ejemplo: Si  es verdadero, entonces  es falso.
+<br>2. Conjunción (Y)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si y solo si ambas proposiciones son verdaderas.
+<br>Ejemplo:  es verdadero solo si  y  son verdaderos.
+<br>3. Disyunción (O)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si al menos una de las proposiciones es verdadera.
+<br>Ejemplo:  es verdadero si  o  (o ambos) son verdaderos.
+<br>4. Implicación (SI... ENTONCES)<br>
+<br>Símbolo: 
+<br>Descripción: Es falso solo si la primera proposición es verdadera y la segunda es falsa.
+<br>Ejemplo:  es falso solo si  es verdadero y  es falso.
+<br>5. Bicondicional (SI Y SOLO SI)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si ambas proposiciones tienen el mismo valor de verdad.
+<br>Ejemplo:  es verdadero si  y  son ambos verdaderos o ambos falsos.
+<br>6. Disyunción Exclusiva (O EXCLUSIVO)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si una y solo una de las proposiciones es verdadera.
+<br>Ejemplo:  es verdadero si  es verdadero y  es falso, o si  es falso y  es verdadero.
+<br><br> 1. Leyes de Identidad<br>
+<br>Ley de Identidad: 
+<br>Ley de la Negación: 
+<br>2. Leyes de Dominación<br>
+<br>Ley de Dominación: 
+<br>Ley de Dominación: 
+<br>3. Leyes Idempotentes<br>
+<br>Ley Idempotente de la Conjunción: 
+<br>Ley Idempotente de la Disyunción: 
+<br>4. Leyes de la Doble Negación<br>
+<br>Ley de la Doble Negación: 
+<br>5. Leyes de Involución<br>
+<br>Ley de Involución: 
+<br>6. Leyes de De Morgan<br>
+<br>Primera Ley de De Morgan: 
+<br>Segunda Ley de De Morgan: 
+<br>7. Leyes de Absorción<br>
+<br>Primera Ley de Absorción: 
+<br>Segunda Ley de Absorción: 
+<br>8. Leyes de la Conmutación<br>
+<br>Ley Conmutativa de la Conjunción: 
+<br>Ley Conmutativa de la Disyunción: 
+<br>9. Leyes de la Asociatividad<br>
+<br>Ley Asociativa de la Conjunción: 
+<br>Ley Asociativa de la Disyunción: 
+<br>10. Leyes Distributivas<br>
+<br>Ley Distributiva de la Conjunción sobre la Disyunción: 
+<br>Ley Distributiva de la Disyunción sobre la Conjunción: 
+<br>11. Leyes de la Implicación<br>
+<br>Ley de Implicación: 
+<br>12. Leyes de la Contraposición<br>
+<br>Ley de la Contraposición: 
+<br>13. Leyes de la Bicondicional<br>
+<br>Ley de la Bicondicional: 
+<br>Ejercicio 1 :<br>Simplificar : <br>Ejercicio 2 : <br>Los miembros de un equipo de deportistas recibieron las siguientes instrucciones acerca de los ejercicios que debían realizar.<br>
+<br>Corred 10 kilómetros solo si montáis en bicicleta
+<br>No corráis 10 kilómetros si montáis en bicicleta y nadáis
+<br>Montad en bicicleta o nadad a menos que corráis 10 kilómetros
+<br>No montéis en bicicleta a menos que corráis 10 kilómetros y no nadéis
+<br>
+<br>Formaliza las órdenes recibidas usando el lenguaje de la lógica proposicional.
+<br>Expresa el conjunto de ordenes de la forma más sencilla posible.
+<br>Ejercicio 3 :<br>En un bar regalan un café a toda persona que cumpla las siguientes condiciones:<br>
+<br>Lleva pantalones si lleva bufanda
+<br>Si lleva bufanda o no lleva abrigo, entonces lleva pantalones
+<br>Lleva pantalones y bufanda solo si no lleva abrigo
+<br>Lleva pantalones o bufanda a menos que no lleva abrigo
+<br>
+<br>¿Me puede indicar lo que tengo que llevar para tomar café gratis?
+<br>Soy muy friolera, ¿podré llevar abrigo y tomar café gratis?
+]]></description><link>matemática-discreta/clase-1-md.html</link><guid isPermaLink="false">Matemática Discreta/Clase 1 - MD.md</guid><pubDate>Mon, 29 Jul 2024 14:42:48 GMT</pubDate></item><item><title><![CDATA[Tipos de Grafos y sus Polinomios Cromáticos]]></title><description><![CDATA[ 
+ <br><br><br>En la teoría de grafos, un grafo es una estructura compuesta por un conjunto de vértices (o nodos) y un conjunto de aristas (o enlaces) que conectan pares de vértices. Los grafos se utilizan para modelar relaciones entre objetos y tienen aplicaciones en diversas áreas, como la informática, las redes, la biología y las ciencias sociales.<br>Uno de los conceptos importantes en el estudio de grafos es el polinomio cromático, que es una función que cuenta el número de maneras en que un grafo puede ser coloreado con un número dado de colores de tal manera que no haya dos vértices adyacentes que compartan el mismo color.<br><br><br>Un grafo simple es un grafo no dirigido sin lazos (aristas que conectan un vértice consigo mismo) y sin múltiples aristas entre los mismos pares de vértices.<br>
+<br>
+Definición Formal: Un grafo simple  consiste en un conjunto de vértices  y un conjunto de aristas , donde cada arista es un par no ordenado de vértices  con  y .
+
+<br>
+Polinomio Cromático: El polinomio cromático de un grafo simple puede representarse como , donde  indica el número de maneras de colorear los vértices de  utilizando  colores de tal manera que no haya dos vértices adyacentes con el mismo color.
+
+<br><img alt="Pasted image 20240819094000.png" src="lib/media/pasted-image-20240819094000.png"><br><br>Un grafo completo es un grafo en el que cada par de vértices distintos está conectado por una única arista.<br>
+<br>
+Definición Formal: Un grafo completo con  vértices se denota como . En , cada par de vértices  con  está conectado por una arista.
+
+<br>
+Polinomio Cromático: El polinomio cromático de un grafo completo  es . Este polinomio refleja que los  vértices deben ser coloreados con  colores de tal manera que cada vértice tenga un color único.<br>
+<img alt="Pasted image 20240819094044.png" src="lib/media/pasted-image-20240819094044.png">
+
+<br><br>Un grafo bipartito es un grafo cuyos vértices se pueden dividir en dos conjuntos disjuntos  y  tales que cada arista conecta un vértice en  con uno en .<br>
+<br>
+Definición Formal: Un grafo  es bipartito si se puede dividir el conjunto de vértices  en dos subconjuntos  y  de tal manera que todas las aristas en  conectan un vértice en  con un vértice en .
+
+<br>
+Polinomio Cromático: Para un grafo bipartito con al menos una arista, el polinomio cromático es . Esto se debe a que como es bipartito, dos colores son suficientes para colorear el grafo de tal manera que los vértices adyacentes tengan colores diferentes.<br>
+<img alt="Pasted image 20240819094500.png" src="lib/media/pasted-image-20240819094500.png">
+
+<br><br>Un grafo cíclico es un grafo que consiste en un solo ciclo, es decir, una secuencia de vértices donde el primer y el último vértice están conectados.<br>
+<br>
+Definición Formal: Un grafo cíclico de  vértices se denota como  y tiene un ciclo de longitud .
+
+<br>
+Polinomio Cromático: El polinomio cromático de un grafo cíclico  con  vértices es .<br>
+<img alt="Pasted image 20240819094528.png" src="lib/media/pasted-image-20240819094528.png">
+
+<br><br>Un grafo rueda es un grafo que se obtiene conectando un único vértice a todos los vértices de un ciclo.<br>
+<br>
+Definición Formal: Un grafo rueda  se compone de un ciclo  con un vértice adicional , llamado el vértice central, que está conectado a todos los vértices de .
+
+<br>
+Polinomio Cromático: El polinomio cromático de un grafo rueda  se da por .
+
+<br><img alt="Pasted image 20240819094551.png" src="lib/media/pasted-image-20240819094551.png"><br><br>Un grafo árbol es un grafo conectado y acíclico, lo que significa que no contiene ciclos.<br>
+<br>
+Definición Formal: Un grafo árbol  es un grafo donde , lo que implica que hay exactamente una ruta entre cualquier par de vértices.
+
+<br>
+Polinomio Cromático: El polinomio cromático de un árbol con  vértices es . Esto se debe a que el primer vértice puede ser coloreado de  formas, y cada vértice adicional tiene  opciones, ya que solo debe diferir del color de su vértice padre.<br>
+<img alt="Pasted image 20240819094606.png" src="lib/media/pasted-image-20240819094606.png">
+
+<br><br>Un grafo estrella es un tipo de grafo que consiste en un nodo central conectado a todos los demás nodos, los cuales no están conectados entre sí.<br>
+<br>
+Definición Formal: Un grafo estrella con  vértices se denota como . Tiene un vértice central  conectado a  vértices periféricos , y no hay aristas entre los vértices periféricos.
+
+<br>
+Polinomio Cromático: El polinomio cromático de un grafo estrella  es . Esto se debe a que el vértice central  puede ser coloreado de  formas, y cada uno de los  vértices periféricos tiene  opciones para su color, ya que no puede coincidir con el color del vértice central.
+
+<br><img alt="Pasted image 20240819094720.png" src="lib/media/pasted-image-20240819094720.png"><br><br>El estudio de los grafos y sus polinomios cromáticos es fundamental para entender cómo se pueden colorear estos grafos bajo ciertas restricciones. Cada tipo de grafo tiene un polinomio cromático que refleja las diferentes maneras en que se pueden asignar colores a los vértices del grafo.<br><br><br>
+<br>Camino Euleriano:
+
+<br>Un camino euleriano en un grafo es un camino que recorre cada arista exactamente una vez.
+<br>Para que un grafo tenga un camino euleriano, debe cumplir con las siguientes condiciones:
+
+<br>El grafo debe ser conexo.
+<br>Debe haber exactamente dos vértices de grado impar. Los extremos del camino euleriano serán estos dos vértices de grado impar.
+
+
+
+
+<br>Ciclo Euleriano:
+
+<br>Un ciclo euleriano en un grafo es un ciclo que recorre cada arista exactamente una vez y regresa al punto de partida.
+<br>Para que un grafo tenga un ciclo euleriano, debe cumplir con las siguientes condiciones:
+
+<br>El grafo debe ser conexo.
+<br>Todos los vértices del grafo deben tener un grado par.
+
+
+
+
+<br><br>
+<br>
+Camino Hamiltoniano:
+
+<br>Un camino hamiltoniano en un grafo es un camino que visita cada vértice del grafo exactamente una vez, sin repetir vértices, pero no necesariamente regresa al punto de partida.
+<br>En otras palabras, un camino hamiltoniano recorre cada vértice una vez y solo una vez.
+
+
+<br>
+Ciclo Hamiltoniano:
+
+<br>Un ciclo hamiltoniano es un ciclo que visita cada vértice del grafo exactamente una vez y regresa al punto de partida.
+<br>Esto significa que un ciclo hamiltoniano recorre cada vértice del grafo una vez y solo una vez, y forma un ciclo completo, es decir, vuelve al vértice inicial sin repetir ningún vértice.
+
+
+<br><br>
+<br>
+Ciclo Euleriano:
+
+<br>El grafo debe ser conexo.
+<br>Todos los vértices deben tener grado par.
+
+
+<br>
+Camino Euleriano:
+
+<br>El grafo debe ser conexo.
+<br>Debe haber exactamente dos vértices de grado impar.
+
+
+<br>
+Ciclo Hamiltoniano:
+
+<br>No hay una condición simple y universal para todos los grafos, pero algunos teoremas ayudan a determinar su existencia:
+
+<br>Teorema de Dirac: Un grafo con  vértices () tiene un ciclo hamiltoniano si cada vértice tiene al menos  vecinos.
+<br>Teorema de Ore: Un grafo con  vértices () tiene un ciclo hamiltoniano si para cada par de vértices no adyacentes, la suma de sus grados es al menos .
+
+
+
+
+<br>
+Camino Hamiltoniano:
+
+<br>No hay una condición simple y universal para todos los grafos, pero la existencia de un camino hamiltoniano puede depender de factores más complejos y no siempre se puede determinar mediante una fórmula simple.
+
+
+]]></description><link>matemática-discreta/clase-5-md-(teoría-de-grafos).html</link><guid isPermaLink="false">Matemática Discreta/Clase 5 - MD (Teoría de Grafos).md</guid><pubDate>Mon, 19 Aug 2024 08:04:42 GMT</pubDate><enclosure url="lib/media/pasted-image-20240819094000.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;lib/media/pasted-image-20240819094000.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>

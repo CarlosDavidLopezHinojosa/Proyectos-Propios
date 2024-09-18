@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -O0 -ggdb3 CMakeFiles/lb2_test.dir/lb2.cpp.o -o lb2_test 

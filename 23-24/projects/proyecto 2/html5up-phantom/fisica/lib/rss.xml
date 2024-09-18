@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Convocatoria de Septiembre]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Convocatoria de Septiembre</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 12 Aug 2024 22:58:20 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 12 Aug 2024 22:58:20 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Planning Física]]></title><description><![CDATA[ 
+ <br><br>
+<br>Campos Escalares y Vectoriales 
+<br>Campo Electrostático
+<br>Circuitos de Corriente Continua
+<br>Campo Magnético
+<br>Circuitos de Corriente Alterna
+<br>Nota : La organización de los contenidos puede variar con respecto a lo escrito en la guía docente, sin embargo los contenidos son los mismos<br>Esta asignatura esta planteada para ser dada en 7 clases.<br>
+(Aunque el número de clases puede variar según el desempeño de la clase).<br>
+<br>
+Clase 1 : Tema 1 e introducción al Tema 2, en esta clase se vera todo lo referido a la teoría de Campos Vectoriales, además haremos un introducción teórica al Campo Electrostático.
+
+<br>
+Clase 2 : Continuaremos con el Tema 2, viendo las formas del Campo Electrostático en distintas superficies, así como la ley de Gauss y el potencial eléctrico.
+
+<br>
+Clase 3 : Terminaremos el Tema 2 e iniciaremos el Tema 3 donde veremos Circuitos de Corriente Continua y los diferentes métodos de resolución de dichos circuitos.
+
+<br>
+Clase 4 : Tema 4, haremos la introducción al Campo Magnético, así como las leyes que lo rigen.
+
+<br>
+Clase 5 : Terminaremos con el Tema 4, realizando ejercicios de este además de repasar contenidos de temas anteriores.
+
+<br>
+Clase 6 : Tema 6, terminaremos la asignatura con los Circuitos en Corriente Alterna, así como herramientas para resolverlos como los números complejos.
+
+<br>
+Clase 7 : Repaso de la asignatura, de contenidos tanto prácticos como teóricos, realización de examenes.
+
+]]></description><link>física/planning-física.html</link><guid isPermaLink="false">Física/Planning Física.md</guid><pubDate>Fri, 26 Jul 2024 17:19:32 GMT</pubDate></item></channel></rss>

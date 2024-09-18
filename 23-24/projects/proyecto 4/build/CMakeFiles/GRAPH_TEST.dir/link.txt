@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/GRAPH_TEST.dir/Graph/GRAPH_TEST.cpp.o -o GRAPH_TEST 

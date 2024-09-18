@@ -1,0 +1,194 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Convocatoria de Septiembre]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Convocatoria de Septiembre</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 29 Jul 2024 08:16:38 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 29 Jul 2024 08:16:37 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Examen MD GG1 JULIO 2024]]></title><description><![CDATA[ 
+ <br><br>Se conoce que cada uno de los 60 estudiantes del primer año del grado en ingeniería informática harán los exámenes finales en las asignaturas de Álgebra, Cálculo y Matemáticas Discretas. Calcular el total de estudiantes que suspendieron los 3 exámenes a partir de los siguientes datos:<br>a) 20 estudiantes aprobaron Álgebra<br>b) 10 estudiantes aprobaron solamente Álgebra<br>c) 25 estudiantes aprobaron Cálculo<br>d) 21 aprobaron Matemáticas Discretas<br>e) 7 aprobaron Álgebra y Cálculo<br>f) 6 aprobaron Cálculo y MD, pero no Álgebra<br>g) 3 aprobaron las 3<br>Para resolver este problema, utilizamos el principio de inclusión y exclusión.<br>Sean:<br>
+<br>: conjunto de estudiantes que aprobaron Álgebra.
+<br>: conjunto de estudiantes que aprobaron Cálculo.
+<br>: conjunto de estudiantes que aprobaron Matemáticas Discretas.
+<br>Los datos dados son:<br>
+<br>
+<br>
+<br> no está dado directamente.
+<br>
+<br>
+<br>
+<br>
+<br>Primero calculamos :<br><br>Para encontrar , usamos la información sobre los que aprobaron solamente una o dos materias:<br>Sabemos que 10 solo aprobaron Álgebra es decir: <br><br>Resolviendo esta ecuación:<br><br><br>Ahora podemos calcular :<br><br>Dado que hay 60 estudiantes en total, el número de estudiantes que suspendieron las tres materias es:<br><br><br>En una bolsa hay 3 bolas blancas, 2 bolas rojas y 1 bola negra. ¿De cuántas formas se pueden extraer 4 bolas de forma que haya bolas de los 3 colores?<br>Para que haya bolas de los tres colores en las 4 bolas extraídas, deben estar presentes 1 bola negra, al menos 1 bola roja y al menos 1 bola blanca. Las posibles combinaciones son:<br>
+<br>1 bola negra, 1 bola roja y 2 bolas blancas.
+<br>1 bola negra, 2 bolas rojas y 1 bola blanca.
+<br>Calculamos las combinaciones posibles para cada caso:<br>
+<br>
+1 bola negra, 1 bola roja y 2 bolas blancas:
+
+<br>Elegimos 1 bola negra de 1: 
+<br>Elegimos 1 bola roja de 2: 
+<br>Elegimos 2 bolas blancas de 3: 
+
+Total de combinaciones: 
+
+<br>
+1 bola negra, 2 bolas rojas y 1 bola blanca:
+
+<br>Elegimos 1 bola negra de 1: 
+<br>Elegimos 2 bolas rojas de 2: 
+<br>Elegimos 1 bola blanca de 3: 
+
+Total de combinaciones: 
+
+<br>Sumando las combinaciones de ambos casos, tenemos:<br>[ 6 + 3 = 9 ]<br>Por lo tanto, hay 9 formas de extraer 4 bolas de la bolsa de manera que haya bolas de los tres colores.<br><br>Para demostrar que ( n(2n-1)(2n+1) ) es múltiplo de 3 para  utilizando inducción matemática, seguiremos estos pasos:<br>
+<br>Base de la inducción: Verificar que la proposición es verdadera para .
+<br>Paso inductivo: Asumir que la proposición es verdadera para  y demostrar que también es verdadera para .
+<br><br>Verifiquemos que la proposición es verdadera para .<br>Para :<br>
+<br>
+Claramente, 3 es múltiplo de 3, por lo tanto la proposición es verdadera para .<br><br>Asumamos que la proposición es verdadera para algún , es decir, que  es múltiplo de 3. <br>Queremos demostrar que  también es múltiplo de 3.<br>Calculamos la expresión para :<br>
+<br>Simplifiquemos cada término:<br>
+<br><br>Entonces, tenemos:<br>
+<br>Necesitamos mostrar que esta expresión es múltiplo de 3. Examinemos cada factor:<br>
+<br>
+<br>
+<br>
+<br>Para comprobar que el producto de estos factores es múltiplo de 3, consideramos los tres posibles restos de  al dividirlo entre 3.<br><br>Si , entonces  para algún entero :<br>
+<br>
+<br>
+<br>Aquí,  es múltiplo de 3, por lo tanto  es múltiplo de 3.<br><br>Si , entonces  para algún entero :<br><br>
+<br>
+<br>Aquí,  es múltiplo de 3, por lo tanto  es múltiplo de 3.<br><br>Si , entonces   para algún entero :<br><br>
+<br>
+<br>Aquí,  es múltiplo de 3, por lo tanto  es múltiplo de 3.<br>En todos los casos, hemos demostrado que  es múltiplo de 3. Por lo tanto, por inducción,   es múltiplo de 3 para todo .<br><br><br>Resuelva la siguiente ecuación de recurrencia:<br><br>Con condiciones iniciales:<br><br>
+<br><br>Dada la ecuación de recurrencia , su ecuación característica asociada es:<br><br><br>Reescribimos la ecuación característica como:<br><br>Resolvemos esta ecuación cuadrática usando la fórmula general para raíces de una ecuación cuadrática :<br><br>En este caso, ,  y :<br><br>
+<br>
+<br>
+<br>Entonces, las raíces de la ecuación característica son  y .<br><br>Dado que las raíces son distintas, la solución general de la ecuación de recurrencia es:<br><br><br>Utilizamos las condiciones iniciales para encontrar los valores de  y :<br>Para :<br>
+<br>
+<br>Para :<br>
+<br>
+<br>Tenemos el siguiente sistema de ecuaciones:<br>
+<br>
+<br>
+<br>Simplificamos la segunda ecuación:<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>Ahora resolvemos el sistema de ecuaciones:<br>
+<br>
+<br>
+<br>Sumamos ambas ecuaciones:<br><br>
+<br>
+<br>
+<br>Restamos la segunda ecuación de la primera:<br><br>
+<br>
+<br>
+<br>Entonces,  y .<br><br>Sustituimos los valores de  y  en la solución general:<br><br>Esta es la solución a la ecuación de recurrencia dada con las condiciones iniciales especificadas.<br><br>Sea  un grafo conexo tal que . Se conoce que  tiene 1 vértice de grado 5, 3 vértices de grado 4, 2 vértices de grado 3, y el resto de 1.<br>a) Orden de  <br> <br>Hay 17 vértices con grado 1.<br>b) Número de Ciclos de <br><br> Debe haber algún error ya que no se pueden tener ciclos negativos]]></description><link>matemática-discreta/exámenes/examen-md-gg1-julio-2024.html</link><guid isPermaLink="false">Matemática Discreta/Exámenes/Examen MD GG1 JULIO 2024.md</guid><pubDate>Sun, 14 Jul 2024 21:02:12 GMT</pubDate></item><item><title><![CDATA[Operadores de la Lógica Proposicional]]></title><description><![CDATA[ 
+ <br>En esta clase daremos una explicación básica de lógica proposición.<br>Materiales útiles: <a data-tooltip-position="top" aria-label="https://srexamen.com/mathlogic" rel="noopener" class="external-link" href="https://srexamen.com/mathlogic" target="_blank"><strong></strong></a>simplificador de expresiones lógicas<br><br>1. Negación (NO)<br>
+<br>Símbolo: 
+<br>Descripción: Invierte el valor de verdad de una proposición.
+<br>Ejemplo: Si  es verdadero, entonces  es falso.
+<br>2. Conjunción (Y)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si y solo si ambas proposiciones son verdaderas.
+<br>Ejemplo:  es verdadero solo si  y  son verdaderos.
+<br>3. Disyunción (O)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si al menos una de las proposiciones es verdadera.
+<br>Ejemplo:  es verdadero si  o  (o ambos) son verdaderos.
+<br>4. Implicación (SI... ENTONCES)<br>
+<br>Símbolo: 
+<br>Descripción: Es falso solo si la primera proposición es verdadera y la segunda es falsa.
+<br>Ejemplo:  es falso solo si  es verdadero y  es falso.
+<br>5. Bicondicional (SI Y SOLO SI)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si ambas proposiciones tienen el mismo valor de verdad.
+<br>Ejemplo:  es verdadero si  y  son ambos verdaderos o ambos falsos.
+<br>6. Disyunción Exclusiva (O EXCLUSIVO)<br>
+<br>Símbolo: 
+<br>Descripción: Es verdadero si una y solo una de las proposiciones es verdadera.
+<br>Ejemplo:  es verdadero si  es verdadero y  es falso, o si  es falso y  es verdadero.
+<br><br> 1. Leyes de Identidad<br>
+<br>Ley de Identidad: 
+<br>Ley de la Negación: 
+<br>2. Leyes de Dominación<br>
+<br>Ley de Dominación: 
+<br>Ley de Dominación: 
+<br>3. Leyes Idempotentes<br>
+<br>Ley Idempotente de la Conjunción: 
+<br>Ley Idempotente de la Disyunción: 
+<br>4. Leyes de la Doble Negación<br>
+<br>Ley de la Doble Negación: 
+<br>5. Leyes de Involución<br>
+<br>Ley de Involución: 
+<br>6. Leyes de De Morgan<br>
+<br>Primera Ley de De Morgan: 
+<br>Segunda Ley de De Morgan: 
+<br>7. Leyes de Absorción<br>
+<br>Primera Ley de Absorción: 
+<br>Segunda Ley de Absorción: 
+<br>8. Leyes de la Conmutación<br>
+<br>Ley Conmutativa de la Conjunción: 
+<br>Ley Conmutativa de la Disyunción: 
+<br>9. Leyes de la Asociatividad<br>
+<br>Ley Asociativa de la Conjunción: 
+<br>Ley Asociativa de la Disyunción: 
+<br>10. Leyes Distributivas<br>
+<br>Ley Distributiva de la Conjunción sobre la Disyunción: 
+<br>Ley Distributiva de la Disyunción sobre la Conjunción: 
+<br>11. Leyes de la Implicación<br>
+<br>Ley de Implicación: 
+<br>12. Leyes de la Contraposición<br>
+<br>Ley de la Contraposición: 
+<br>13. Leyes de la Bicondicional<br>
+<br>Ley de la Bicondicional: 
+<br>Ejercicio 1 :<br>Simplificar : <br>Ejercicio 2 : <br>Los miembros de un equipo de deportistas recibieron las siguientes instrucciones acerca de los ejercicios que debían realizar.<br>
+<br>Corred 10 kilómetros solo si montáis en bicicleta
+<br>No corráis 10 kilómetros si montáis en bicicleta y nadáis
+<br>Montad en bicicleta o nadad a menos que corráis 10 kilómetros
+<br>No montéis en bicicleta a menos que corráis 10 kilómetros y no nadéis
+<br>
+<br>Formaliza las órdenes recibidas usando el lenguaje de la lógica proposicional.
+<br>Expresa el conjunto de ordenes de la forma más sencilla posible.
+<br>Resolución:<br> Correr 10 kilómetros.<br>
+ montar en bicicleta.<br>
+ nadar.<br>
+<br>
+<br> 
+<br>
+<br>
+<br>Proposición final:<br><br>Simplificamos proposiciones.<br>
+<br> =&gt; 
+<br> =&gt; 
+<br> =&gt; 
+<br> =&gt;  =&gt; 
+<br>Ejercicio 3 :<br>En un bar regalan un café a toda persona que cumpla las siguientes condiciones:<br>
+<br>Lleva pantalones si lleva bufanda
+<br>Si lleva bufanda o no lleva abrigo, entonces lleva pantalones
+<br>Lleva pantalones y bufanda solo si no lleva abrigo
+<br>Lleva pantalones o bufanda a menos que no lleva abrigo
+<br>
+<br>¿Me puede indicar lo que tengo que llevar para tomar café gratis?
+<br>Soy muy friolera, ¿podré llevar abrigo y tomar café gratis?
+]]></description><link>matemática-discreta/clase-1-md.html</link><guid isPermaLink="false">Matemática Discreta/Clase 1 - MD.md</guid><pubDate>Mon, 29 Jul 2024 07:33:19 GMT</pubDate></item><item><title><![CDATA[Planning Matemática Discreta]]></title><description><![CDATA[ 
+ <br><br>
+<br>Lógica
+<br>Conceptos Básicos de la teoría de conjuntos
+<br>Introducción a la teoría de números 
+<br>Combinatoria
+<br>Introducción a la teoría de grafos
+<br>
+<br>
+Clase 1 : Tema 1, lógica proposicional, álgebra de boole y demostración de proposiciones.
+
+<br>
+Clase 2 : Tema 2, Operaciones básicas de conjuntos y el principio de inclusión exclusión.
+
+<br>
+Clase 3 : Tema 3, Teoría de números, algoritmo de Euclides, principio de divisibilidad, resolución de ecuaciones diofánticas y el principio de inducción.
+
+<br>
+Clase 4 : Tema 4, Combinatoria, permutaciones, variaciones y combinaciones además de relaciones de recurrencia.
+
+<br>
+Clase 5 : Introducción a la teoría de grafos, operaciones y tipos de grafos además de clasificación de estos en Grafos Eulerianos o Hamiltonianos, por último coloración de grafos.
+
+<br>
+Clase 6 : Repaso de contenidos y realización de ejercicios de examen.
+
+]]></description><link>matemática-discreta/planning-matemática-discreta.html</link><guid isPermaLink="false">Matemática Discreta/Planning Matemática Discreta.md</guid><pubDate>Sat, 27 Jul 2024 08:47:32 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,5 @@
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3/build/CMakeFiles/lb_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3/build/CMakeFiles/lb2_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3/build/CMakeFiles/root_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3/build/CMakeFiles/edit_cache.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3/build/CMakeFiles/rebuild_cache.dir

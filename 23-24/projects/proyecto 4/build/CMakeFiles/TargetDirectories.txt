@@ -1,0 +1,15 @@
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/edge_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/graph_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/graph_cell_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/vertex_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/dfs_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/bfs_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/dijkstra_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/floyd_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/kruskal_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/prim_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/a_star_test.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/GRAPH_TEST.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/run_all_tests.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/edit_cache.dir
+/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 4/build/CMakeFiles/rebuild_cache.dir

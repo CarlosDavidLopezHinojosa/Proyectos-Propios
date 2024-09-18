@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/dijkstra_test.dir/Graph/dijkstra_test.cpp.o -o dijkstra_test 

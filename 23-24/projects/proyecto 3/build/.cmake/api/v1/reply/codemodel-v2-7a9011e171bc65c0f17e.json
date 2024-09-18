@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "B-Tree",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lb2_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lb2_test-Debug-8087c6a8db3c92766333.json",
+					"name" : "lb2_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lb_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lb_test-Debug-43d7dd01d98c49150e16.json",
+					"name" : "lb_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "root_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-root_test-Debug-7d6e507faae36f55eb3d.json",
+					"name" : "root_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3/build",
+		"source" : "/home/carlos/Escritorio/Proyectos Propios/23-24/projects/proyecto 3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

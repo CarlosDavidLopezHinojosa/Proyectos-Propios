@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -O0 -ggdb3 CMakeFiles/test.dir/test.cpp.o -o test 
